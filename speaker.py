@@ -21,9 +21,6 @@ with sr.Microphone() as source:
 cont = True
 while cont:
     try:
-    # for testing purposes, we're just using the default API key
-    # to use another API key, use `r.recognize_google(audio, key="GOOGLE_SPEECH_RECOGNITION_API_KEY")`
-    # instead of `r.recognize_google(audio)`
         if "hello" in r.recognize_google(audio):
             talker("hello what can i do for you?")
             with sr.Microphone() as source:
